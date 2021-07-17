@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native"
 const styles = StyleSheet.create({
     card: {
         flex: 1,
-        flexDirection: 'row',
+        
         justifyContent:'space-around',
         alignItems: 'center',
         padding: 20,        
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     },
     buttonRed: {
         width: 30,
-        height: 30,
+        
         backgroundColor:"red",
         padding: 10,
         borderRadius: 15  

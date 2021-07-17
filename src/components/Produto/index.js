@@ -1,39 +1,50 @@
-import React from "react"
-import {View,Image,TouchableOpacity,Text} from "react-native"
-import styles from "./style"
-import { atualizar, deletar } from '../.././routes/routes';
+// import React,{useState, useRef} from "react"
+// import {View,Image,TouchableOpacity,Text} from "react-native"
+// import styles from "./style"
+// import rotas from "../../routes/Produto/routes";
 
-export default Produto = ({ produto, key }) => {
+
+// export default Produto = ({ data }) => {
+
+//     const modalizeRef = useRef(null);
+
+
+//     const [deletado, setDeletado] = useState(0);
     
-    const [produtoNovo, setProdutoNovo] = useState({ nome: '', quantidade: 0});
+//     const handleEdit = () => {
+//         modalizeRef.current?.open();
+//     }
 
-    const handleDelete = () => {
-        deletar(produto.id)
-    }
+//     const handleDelete = () => {
+//         rotas.deletar(data.id)
+//         setDeletado(deletado + 1)              
+//     }
+   
 
-    const handleEdit = () => {
-        setProdutoNovo()
-        atualizar(produto.id, produtoNovo)
-    }
-
-    return (
-        <View key={key} style={styles.card}>
-            <Image source={produto.linkImagem} style={styles.image}/>
-            <Text>{produto.nome}</Text>
-            <Text>R${produto.preco}</Text>            
-            <TouchableOpacity onPress={modal} styles={styles.buttonGreen}>
-                <Text>EDITAR</Text>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={handleDelete} styles={styles.buttonRed}>
-                <Text>DELETE</Text>
-            </TouchableOpacity>
-        </View>
-    )
-}
-
-//     "id": 6,
-//     "nome": "Camisa New Era",
-//     "descricao": "Camisa New Era",
-//     "preco": 89.9,
-//     "quantidade": 0,
-//     "linkImagem": "https://cdn.iset.io/assets/37657/produtos/8932/thumb_400-400-1_mbv21tsh063_c016_5resultado.jpg"
+//     return (
+//         <>
+//         {deletado == 0 ? (<>
+//                     <View style={styles.card}>
+//                         <Image source={{ uri: data.linkImagem }} style={styles.image}/>
+//                         <Text>{data.nome}</Text>
+//                         <Text>R${data.preco}</Text>            
+//                         <TouchableOpacity 
+//                         style = {{ backgroundColor:"yellow", padding: 10, borderRadius: 30}} 
+//                         onPress={handleEdit} >
+//                             <Text>EDITAR</Text>
+//                         </TouchableOpacity>
+//                         <TouchableOpacity  
+//                         style = {{ backgroundColor:"black", padding: 10, borderRadius: 30}} 
+//                         onPress={handleDelete} >
+//                             <Text style = {{color:"white"}}>DELETE</Text>
+//                         </TouchableOpacity>
+                        
+//                     </View>
+//                     <ModalizeDefault modalizeRef={modalizeRef}/>
+//                     </>
+//                     ): (
+//                         <View></View>
+//                     )}
+//         </>
+//     )
+// }
